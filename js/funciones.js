@@ -1,7 +1,61 @@
-<script>
-fetch('pages/1_Portada.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('portada').innerHTML = html;
-  });
+/*<script>
+  function cargarPagina(ruta, contenedorId, callback) {
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch(ruta)
+        .then(res => {
+          if (!res.ok) {
+            throw new Error('No se pudo cargar ' + ruta);
+          }
+          return res.text();
+        })
+        .then(html => {
+          const contenedor = document.getElementById(contenedorId);
+          if (!contenedor) {
+            console.error('No existe el contenedor:', contenedorId);
+            return;
+          }
+
+          contenedor.innerHTML = html;
+
+          if (typeof callback === 'function') {
+            callback();
+          }
+        })
+        .catch(err => console.error(err));
+    });
+  }
 </script>
+*/
+
+
+
+function cargarPag(ruta, contenedorId, callback) {
+  fetch(ruta)
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('No se pudo cargar ' + ruta);
+      }
+      return res.text();
+    })
+    .then(html => {
+      const contenedor = document.getElementById(contenedorId);
+      if (!contenedor) {
+        console.error('No existe el contenedor:', contenedorId);
+        return;
+      }
+      contenedor.innerHTML = html;
+      if (callback) callback();
+    })
+    .catch(err => console.error(err));
+}
+
+
+function cargarPagina(ruta, contenedorId) {
+  document.addEventListener('DOMContentLoaded', function () {
+    cargarPag(ruta, contenedorId, function () {
+      $('.flipbook').turn();
+    });
+  });
+}
+
+
