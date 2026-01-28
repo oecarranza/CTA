@@ -1,34 +1,3 @@
-/*<script>
-  function cargarPagina(ruta, contenedorId, callback) {
-    document.addEventListener('DOMContentLoaded', function () {
-      fetch(ruta)
-        .then(res => {
-          if (!res.ok) {
-            throw new Error('No se pudo cargar ' + ruta);
-          }
-          return res.text();
-        })
-        .then(html => {
-          const contenedor = document.getElementById(contenedorId);
-          if (!contenedor) {
-            console.error('No existe el contenedor:', contenedorId);
-            return;
-          }
-
-          contenedor.innerHTML = html;
-
-          if (typeof callback === 'function') {
-            callback();
-          }
-        })
-        .catch(err => console.error(err));
-    });
-  }
-</script>
-*/
-
-
-
 function cargarPag(ruta, contenedorId, callback) {
   fetch(ruta)
     .then(res => {
@@ -59,3 +28,8 @@ function cargarPagina(ruta, contenedorId) {
 }
 
 
+  /*
+        <script>
+          cargarPagina('Paginas\1_Portada.html', 'portada');
+        </script>
+        */
