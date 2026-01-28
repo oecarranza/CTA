@@ -1,0 +1,43 @@
+📌 2️⃣ Activa GitHub Pages
+
+1️⃣ Entra a tu repositorio
+2️⃣ Settings
+3️⃣ Pages
+4️⃣ En Source selecciona:
+
+Deploy from a branch
+
+
+5️⃣ Branch:
+
+main
+
+
+6️⃣ Folder:
+
+/ (root)
+
+
+7️⃣ Save
+
+📌 3️⃣ Obtén tu URL pública
+
+En 1–2 minutos verás algo como:
+
+https://omar-carranza.github.io/mi-flipbook/
+
+
+🎉 Esa URL funciona en cualquier celular
+
+📱 4️⃣ Ábrela desde el celular
+
+Solo entra a la URL desde:
+
+Chrome (Android)
+
+Safari (iPhone)
+
+✔ No necesitas Wi-Fi
+✔ No necesitas PC encendida
+✔ No bloquea fetch()
+✔ Turn.js funciona perfecto
